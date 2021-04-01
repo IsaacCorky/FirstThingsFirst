@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Tasks";
+}
+
+@model QuadrantViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Your Tasks</h1>
+
+
+    <table style="width:100%">
+        <tr>
+            <th>Quadrant 1</th>
+            <th>Quadrant 2</th>
+        </tr>
+        <tr>
+            <td>
+                @foreach (var x in Model.Quadrant1)
+                {@x.TaskDescription <br />}
+            </td>
+            <td>
+                @foreach (var x in Model.Quadrant2)
+                {@x.TaskDescription <br />}
+            </td>
+        </tr>
+        <tr>
+            <th>Quadrant 3</th>
+            <th>Quadrant 4</th>
+        </tr>
+        <tr>
+            <td>
+                @foreach (var x in Model.Quadrant3)
+                {@x.TaskDescription <br />}
+            </td>
+            <td>
+                @foreach (var x in Model.Quadrant4)
+                {@x.TaskDescription <br />}
+            </td>
+        </tr>
+    </table>
+
+@*    <table>
+        <tr><th>Quadrant 1</th></tr>
+        @foreach (var x in Model.Quadrant1)
+        {
+            <tr><td>@x.TaskDescription</td></tr>
+}
+    </table>
+    <table>
+        <tr><th>Quadrant 2</th></tr>
+        @foreach (var x in Model.Quadrant2)
+        {
+            <tr><td>@x.TaskDescription</td></tr>
+}
+    </table>*@
+</div>

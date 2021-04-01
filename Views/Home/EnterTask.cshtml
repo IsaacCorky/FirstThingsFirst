@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Enter Task";
+}
+
+@model TaskItem
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="EnterTask" method="post">
+    <label asp-for="TaskDescription">Task Name</label>
+    <input asp-for="TaskDescription" />
+    <br />
+
+    <label asp-for="TaskUrgent">Urgent?</label>
+    <input asp-for="TaskUrgent" type="checkbox" /> 
+    <br />
+
+    <label asp-for="TaskImportant">Important?</label>
+    <input asp-for="TaskImportant" type="checkbox" />
+    <br />
+
+    <button type="submit">Add Task</button>
+    <br />
+
+    <div asp-validation-summary="All"></div>
+</form>
